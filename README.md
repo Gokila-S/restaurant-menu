@@ -1,10 +1,10 @@
-# 🍽️ The Gourmet - Restaurant Menu App
+# 🍽️ Foodify - Restaurant Menu App
 
 A modern, responsive restaurant menu application built with **React.js**. This project demonstrates best practices in React development including component-based architecture, state management, and modern CSS styling.
 
 ## 📋 Project Overview
 
-**The Gourmet** is a full-featured restaurant menu web application that allows users to:
+**Foodify** is a full-featured restaurant menu web application that allows users to:
 - Browse a curated menu of dishes
 - Filter dishes by category, dietary preferences, and preparation time
 - Search for specific dishes
@@ -105,28 +105,9 @@ App.js
 
 ## 👨‍💻 Author
 
-Developed as a college project demonstrating React.js fundamentals and modern web development practices.
+Developed as a project demonstrating React.js fundamentals and modern web development practices.
 
 ## 📄 License
 
 This project is for educational purposes.
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
