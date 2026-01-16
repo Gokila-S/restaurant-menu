@@ -139,7 +139,7 @@ export default function MenuPage() {
                         <Icon name="Search" className="search-icon-lg" />
                         <input
                             type="text"
-                            placeholder="Search our menu for dish, ingredient, or price..."
+                            placeholder="Search dishes, ingredients..."
                             value={searchTerm}
                             onChange={(e) => setSearchTerm(e.target.value)}
                         />
@@ -148,7 +148,19 @@ export default function MenuPage() {
                                 <Icon name="X" />
                             </button>
                         )}
-                        <button className="search-btn">Find Dish</button>
+                        <button className="search-btn">Search</button>
+                    </div>
+
+                    <div className="quick-filters">
+                        {QUICK_FILTERS.map(filter => (
+                            <button
+                                key={filter.value}
+                                className={`quick-filter-btn ${quickFilter === filter.value ? 'active' : ''}`}
+                                onClick={() => setQuickFilter(quickFilter === filter.value ? '' : filter.value)}
+                            >
+                                {filter.label}
+                            </button>
+                        ))}
                     </div>
 
                     {activeTags.length > 0 && (
@@ -167,17 +179,6 @@ export default function MenuPage() {
                             ))}
                         </div>
                     )}
-                        <div className="quick-filters">
-                        {QUICK_FILTERS.map(filter => (
-                            <button
-                                key={filter.value}
-                                className={`quick-filter-btn ${quickFilter === filter.value ? 'active' : ''}`}
-                                onClick={() => setQuickFilter(quickFilter === filter.value ? '' : filter.value)}
-                            >
-                                {filter.label}
-                            </button>
-                        ))}
-                    </div>
                 </section>
                 
 

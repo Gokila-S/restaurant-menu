@@ -14,7 +14,7 @@ const Header = () => {
 
     return (
         <header className={`navbar ${isScrolled ? 'sticky-scrolled' : ''}`}>
-            <div className="logo">� Foodify</div>
+            <div className="logo">🥗Foodify</div>
             <nav className="main-nav">
                 <ul>
                     <li><a href="#menu" className="active">Menu</a><span className="active-indicator active-line"></span></li>
