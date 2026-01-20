@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Header, HeroSection, Sidebar, DishCard, DishDetailModal, Icon } from '../components';
 import { DISHES_DATA, QUICK_FILTERS, FILTER_OPTIONS } from '../data';
 
-export default function MenuPage() {
+export default function MenuPage({ setCurrentPage }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [quickFilter, setQuickFilter] = useState('');
     const [sidebarFilters, setSidebarFilters] = useState({});
@@ -129,7 +129,7 @@ export default function MenuPage() {
 
     return (
         <div className="app-container">
-            <Header />
+            <Header currentPage="menu" setCurrentPage={setCurrentPage} />
             <main>
                 <HeroSection />
 

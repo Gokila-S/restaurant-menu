@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Icon from '../common/Icon';
 
-const Header = () => {
+const Header = ({ currentPage = 'menu', setCurrentPage }) => {
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -12,15 +12,57 @@ const Header = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    const handleNavClick = (page) => {
+        if (setCurrentPage) {
+            setCurrentPage(page);
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <header className={`navbar ${isScrolled ? 'sticky-scrolled' : ''}`}>
-            <div className="logo">🥗Foodify</div>
+            <div className="logo" onClick={() => handleNavClick('menu')} style={{ cursor: 'pointer' }}>🥗Foodify</div>
             <nav className="main-nav">
                 <ul>
-                    <li><a href="#menu" className="active">Menu</a><span className="active-indicator active-line"></span></li>
-                    <li><a href="#specials">Specials</a><span className="active-indicator"></span></li>
-                    <li><a href="#reservations">Reservations</a><span className="active-indicator"></span></li>
-                    <li><a href="#contact">Contact</a><span className="active-indicator"></span></li>
+                    <li>
+                        <a 
+                            onClick={(e) => { e.preventDefault(); handleNavClick('menu'); }} 
+                            className={currentPage === 'menu' ? 'active' : ''}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            Menu
+                        </a>
+                        <span className={`active-indicator ${currentPage === 'menu' ? 'active-line' : ''}`}></span>
+                    </li>
+                    <li>
+                        <a 
+                            onClick={(e) => { e.preventDefault(); handleNavClick('specials'); }} 
+                            className={currentPage === 'specials' ? 'active' : ''}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            Specials
+                        </a>
+                        <span className={`active-indicator ${currentPage === 'specials' ? 'active-line' : ''}`}></span>
+                    </li>
+                    <li>
+                        <a 
+                            onClick={(e) => { e.preventDefault(); handleNavClick('reservations'); }} 
+                            className={currentPage === 'reservations' ? 'active' : ''}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            Reservations
+                        </a>
+                        <span className={`active-indicator ${currentPage === 'reservations' ? 'active-line' : ''}`}></span>
+                    </li>
+                    <li>
+                        <a 
+                            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' }); }} 
+                            style={{ cursor: 'pointer' }}
+                        >
+                            Contact
+                        </a>
+                        <span className="active-indicator"></span>
+                    </li>
                 </ul>
             </nav>
             <div className="user-actions">
