@@ -3,7 +3,7 @@ import Icon from './common/Icon';
 
 const DishCard = ({ dish, onCardClick }) => {
     const [isBookmarked, setIsBookmarked] = useState(false);
-    const difficultyClass = dish.difficulty.toLowerCase().replace(/\s/g, '-');
+    const spiceLevelClass = dish.spiceLevel ? dish.spiceLevel.toLowerCase().replace(/\s/g, '-') : 'none';
     const priceFormatted = `₹${dish.price}`;
 
     const handleClick = (e) => {
@@ -41,7 +41,7 @@ const DishCard = ({ dish, onCardClick }) => {
                 
                 <div className="dish-meta">
                     <span className="meta-item time-item"><Icon name="Clock" />{dish.time}</span>
-                    <span className={`meta-item difficulty ${difficultyClass}`}>{dish.difficulty}</span>
+                    <span className={`meta-item spice-level ${spiceLevelClass}`}><Icon name="Flame" />{dish.spiceLevel}</span>
                     <span className="meta-item price-item">{priceFormatted}</span>
                 </div>
                 

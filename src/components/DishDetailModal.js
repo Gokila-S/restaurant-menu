@@ -37,7 +37,7 @@ const DishDetailModal = ({ dish, onClose }) => {
     }
 
     const priceFormatted = `₹${dish.price}`;
-    const difficultyClass = dish.difficulty.toLowerCase().replace(/\s/g, '-');
+    const spiceLevelClass = dish.spiceLevel ? dish.spiceLevel.toLowerCase().replace(/\s/g, '-') : 'none';
 
     return (
         <div className="modal-overlay" onClick={handleOverlayClick}>
@@ -65,8 +65,8 @@ const DishDetailModal = ({ dish, onClose }) => {
 
                         <div className="modal-meta-row">
                             <span className="modal-meta-item time-item"><Icon name="Clock" /> {dish.time}</span>
-                            <span className={`modal-meta-item difficulty ${difficultyClass}`}>{dish.difficulty}</span>
-                            <span className="modal-meta-item"><Icon name="Users" /> {dish.servings} Serving{dish.servings > 1 ? 's' : ''}</span>
+                            <span className={`modal-meta-item spice-level ${spiceLevelClass}`}><Icon name="Flame" /> {dish.spiceLevel}</span>
+                            <span className="modal-meta-item"><Icon name="Users" /> {dish.portion}</span>
                         </div>
 
                         <div className="modal-tags">

@@ -9,9 +9,9 @@ export const DISHES_DATA = [
         fullDescription: 'Our signature masala dosa is made from fermented rice and urad dal batter, spread thin on a hot griddle until golden and crispy. Filled with aromatic potato masala seasoned with mustard seeds, curry leaves, and turmeric. Served with piping hot sambar and fresh coconut chutney.', 
         time: '15 min', 
         price: 80, 
-        difficulty: 'Medium', 
+        spiceLevel: 'Mild', 
         rating: 4.9, 
-        servings: 1, 
+        portion: 'Regular', 
         tags: ['breakfast', 'vegetarian', 'signature'] 
     },
     { 
@@ -23,9 +23,9 @@ export const DISHES_DATA = [
         fullDescription: 'Traditional South Indian breakfast made from fermented rice and lentil batter, steamed to perfection. Our idlis are soft, fluffy, and served with authentic Tamil-style sambar loaded with vegetables and a blend of aromatic spices. Accompanied by fresh coconut and tomato chutneys.', 
         time: '10 min', 
         price: 60, 
-        difficulty: 'Easy', 
+        spiceLevel: 'Mild', 
         rating: 4.7, 
-        servings: 2, 
+        portion: '4 pcs', 
         tags: ['breakfast', 'vegetarian', 'healthy'] 
     },
     { 
@@ -37,9 +37,9 @@ export const DISHES_DATA = [
         fullDescription: 'A bold and flavorful curry from the Chettinad cuisine of Tamil Nadu. Tender chicken pieces simmered in a rich gravy made with freshly roasted and ground spices including black pepper, fennel, star anise, and kalpasi. Served with steamed rice or parotta.', 
         time: '30 min', 
         price: 220, 
-        difficulty: 'Hard', 
+        spiceLevel: 'Extra Spicy', 
         rating: 4.8, 
-        servings: 2, 
+        portion: 'Serves 2', 
         tags: ['main', 'spicy', 'house-special'] 
     },
     { 
@@ -51,9 +51,9 @@ export const DISHES_DATA = [
         fullDescription: 'The crown jewel of South Indian cuisine. Long-grain basmati rice layered with tender marinated chicken, slow-cooked in the traditional dum style. Infused with saffron, fried onions, mint, and whole spices. Served with raita and mirchi ka salan.', 
         time: '45 min', 
         price: 280, 
-        difficulty: 'Hard', 
+        spiceLevel: 'Spicy', 
         rating: 4.9, 
-        servings: 2, 
+        portion: 'Serves 2', 
         tags: ['main', 'signature', 'spicy'] 
     },
     { 
@@ -65,9 +65,9 @@ export const DISHES_DATA = [
         fullDescription: 'Traditional South Indian fritters made from urad dal batter, shaped into donuts and deep-fried until golden and crispy. The exterior is perfectly crunchy while the inside remains soft and fluffy. Served hot with sambar for dipping and coconut chutney.', 
         time: '12 min', 
         price: 50, 
-        difficulty: 'Medium', 
+        spiceLevel: 'Mild', 
         rating: 4.6, 
-        servings: 2, 
+        portion: '3 pcs', 
         tags: ['starter', 'vegetarian', 'fried'] 
     },
     { 
@@ -79,9 +79,9 @@ export const DISHES_DATA = [
         fullDescription: 'Authentic Kerala-style fish curry featuring fresh fish fillets simmered in a tangy gravy made with coconut milk, kudampuli (fish tamarind), and aromatic spices. Tempered with coconut oil, mustard seeds, and curry leaves. Best enjoyed with steamed rice.', 
         time: '25 min', 
         price: 250, 
-        difficulty: 'Medium', 
+        spiceLevel: 'Spicy', 
         rating: 4.7, 
-        servings: 2, 
+        portion: 'Serves 2', 
         tags: ['main', 'seafood', 'spicy'] 
     },
     { 
@@ -93,9 +93,9 @@ export const DISHES_DATA = [
         fullDescription: 'A unique fusion dessert combining the beloved South Indian filter coffee with traditional payasam. Creamy rice pudding slow-cooked in milk, sweetened with jaggery, and infused with freshly brewed filter coffee decoction. Garnished with roasted cashews and raisins.', 
         time: '20 min', 
         price: 90, 
-        difficulty: 'Medium', 
+        spiceLevel: 'None', 
         rating: 4.5, 
-        servings: 2, 
+        portion: 'Serves 2', 
         tags: ['dessert', 'sweet', 'vegetarian'] 
     },
     { 
@@ -107,9 +107,9 @@ export const DISHES_DATA = [
         fullDescription: 'Comfort food at its finest! Ven Pongal is a savory porridge made with rice and moong dal, tempered with cumin, black pepper, ginger, and generous amounts of ghee. Topped with fried cashews and curry leaves. Served with crispy medu vadai and coconut chutney.', 
         time: '18 min', 
         price: 120, 
-        difficulty: 'Easy', 
+        spiceLevel: 'Mild', 
         rating: 4.8, 
-        servings: 1, 
+        portion: 'Regular', 
         tags: ['breakfast', 'vegetarian', 'quick'] 
     },
     { 
@@ -121,9 +121,9 @@ export const DISHES_DATA = [
         fullDescription: 'Popular Karnataka snack made from a smooth urad dal batter seasoned with ginger, green chilies, and curry leaves. Deep-fried to golden perfection, these bondas are crispy on the outside and soft inside. Perfect tea-time snack served with chutneys.', 
         time: '10 min', 
         price: 45, 
-        difficulty: 'Easy', 
+        spiceLevel: 'Mild', 
         rating: 4.4, 
-        servings: 4, 
+        portion: '5 pcs', 
         tags: ['starter', 'vegetarian', 'quick'] 
     },
     { 
@@ -135,9 +135,9 @@ export const DISHES_DATA = [
         fullDescription: 'A beloved South Indian sweet made from roasted semolina cooked in ghee and sugar syrup. Infused with saffron strands and cardamom for an aromatic flavor. Generously topped with fried cashews, raisins, and a drizzle of pure ghee. Served warm.', 
         time: '15 min', 
         price: 70, 
-        difficulty: 'Easy', 
+        spiceLevel: 'None', 
         rating: 4.6, 
-        servings: 2, 
+        portion: 'Serves 2', 
         tags: ['dessert', 'sweet', 'vegetarian'] 
     },
 ];
