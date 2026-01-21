@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Icon from './common/Icon';
 
-const DishDetailModal = ({ dish, onClose }) => {
+const DishDetailModal = ({ dish, onClose, onAddToOrder }) => {
     const modalRef = useRef(null);
 
     useEffect(() => {
@@ -17,6 +17,14 @@ const DishDetailModal = ({ dish, onClose }) => {
     const handleOverlayClick = (event) => {
         if (modalRef.current && !modalRef.current.contains(event.target)) {
             onClose();
+        }
+    };
+
+    const handleAddToOrder = (e) => {
+        e.stopPropagation();
+        console.log('Add to Order clicked!', dish, onAddToOrder);
+        if (onAddToOrder && dish) {
+            onAddToOrder(dish);
         }
     };
 
@@ -77,7 +85,7 @@ const DishDetailModal = ({ dish, onClose }) => {
 
                         <div className="modal-actions">
                              <div className="price-tag">{priceFormatted}</div>
-                             <button className="btn primary order-btn">Add to Order</button>
+                             <button className="btn primary order-btn" onClick={handleAddToOrder}>Add to Order</button>
                         </div>
 
                          <button className="modal-close-btn" onClick={onClose}>

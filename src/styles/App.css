@@ -1200,7 +1200,9 @@ main { padding-top: var(--spacing-lg); }
 .order-btn { 
     padding: 14px 32px; 
     font-size: 1rem; 
-    border-radius: 30px; 
+    border-radius: 30px;
+    position: relative;
+    z-index: 10;
 }
 
 
@@ -1673,5 +1675,43 @@ footer {
     .specials-hero,
     .reservations-hero {
         padding: 60px 16px 40px;
+    }
+}
+
+/* Order Notification Styles */
+.order-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #10b981;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    z-index: 9999;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease-in-out forwards;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
     }
 }

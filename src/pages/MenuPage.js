@@ -2,7 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { Header, HeroSection, Sidebar, DishCard, DishDetailModal, Icon } from '../components';
 import { DISHES_DATA, QUICK_FILTERS, FILTER_OPTIONS } from '../data';
 
-export default function MenuPage({ setCurrentPage }) {
+export default function MenuPage({ setCurrentPage, onAddToOrder }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [quickFilter, setQuickFilter] = useState('');
     const [sidebarFilters, setSidebarFilters] = useState({});
@@ -220,7 +220,8 @@ export default function MenuPage({ setCurrentPage }) {
             {isModalOpen && (
                 <DishDetailModal 
                     dish={selectedDish} 
-                    onClose={closeModal} 
+                    onClose={closeModal}
+                    onAddToOrder={onAddToOrder}
                 />
             )}
 

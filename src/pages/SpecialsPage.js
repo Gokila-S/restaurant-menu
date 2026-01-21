@@ -114,7 +114,7 @@ const SPECIALS_DATA = [
     }
 ];
 
-export default function SpecialsPage({ setCurrentPage }) {
+export default function SpecialsPage({ setCurrentPage, onAddToOrder }) {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedDish, setSelectedDish] = useState(null);
 
@@ -187,7 +187,7 @@ export default function SpecialsPage({ setCurrentPage }) {
             </main>
 
             {isModalOpen && selectedDish && (
-                <DishDetailModal dish={selectedDish} onClose={closeModal} />
+                <DishDetailModal dish={selectedDish} onClose={closeModal} onAddToOrder={onAddToOrder} />
             )}
         </div>
     );
